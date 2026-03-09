@@ -33,7 +33,7 @@ This is the signal corresponding to the nontronite sample.
 
 ### Training Data
 
-Two files provide simulated data generated from the **Hapke forward model**.
+Two files provide simulated data generated from the **Hapke forward model**, with additive Gaussian noise.
 
 #### Parameter samples
 
@@ -57,7 +57,7 @@ These simulated pairs are used to learn an approximation of the inverse mapping.
 
 ## Posterior Approximation with GLLiM
 
-Using `Xgllim.csv` and `Ygllim.csv`, we train a **Gaussian Locally Linear Mapping (GLLiM)** model.
+Using `Xgllim.csv` and `Ygllim.csv`, we train a **Gaussian Locally Linear Mapping (GLLiM)** model [1, 2].
 
 The trained model provides a mixture-of-Gaussians approximation of the posterior distribution
 
@@ -98,3 +98,9 @@ The software PlanetGLLiM, available [here](https://kernelo-mistis.gitlabpages.in
 - the **Hapke model**
 
 An implementation for NVA can be found [here](https://github.com/tam-leminh/natural-variational-annealing).
+
+## References
+
+[1] A. Deleforge, F. Forbes and R. Horaud. (2015). High-Dimensional Regression with Gaussian Mixtures and Partially-Latent Response Variables. Statistics and Computing, 25(5):893--911.
+
+[2] B. Kugler, F. Forbes and S. Doute. (2022). Fast Bayesian Inversion for high dimensional inverse problems. Statistics and Computing, 32(2):31.
